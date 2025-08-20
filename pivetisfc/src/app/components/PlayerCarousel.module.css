@@ -1,0 +1,127 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.banner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 48px 1fr 48px;
+  align-items: center;
+  background: linear-gradient(135deg, #0b0f0b, #0e1a0f);
+  border: 1px solid #1e2b1f;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .35), inset 0 0 0 1px rgba(34, 255, 96, 0.05);
+}
+
+.imageSlot {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(to top, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 60%);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+}
+
+.badge {
+  color: #0c1b0e;
+  background: #22ff60;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  box-shadow: 0 0 0 2px rgba(18, 255, 96, .25), 0 0 20px rgba(18, 255, 96, .35);
+}
+
+.title h2 {
+  color: #e8ffe9;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: .02em;
+  text-shadow: 0 2px 8px rgba(0,0,0,.6);
+}
+
+.navBtn {
+  background: transparent;
+  color: #9ce9a7;
+  border: none;
+  cursor: pointer;
+  font-size: 32px;
+  transition: color .2s ease, transform .2s ease;
+  padding: 8px;
+}
+
+.navBtn:hover {
+  color: #22ff60;
+  transform: scale(1.08);
+}
+
+.sideList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.playerBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0c0f0d;
+  border: 1px solid #1f2a21;
+  color: #cfead4;
+  padding: 12px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color .2s ease, background .2s ease, transform .08s ease-in;
+}
+
+.playerBtn:hover {
+  border-color: #22ff6066;
+  background: linear-gradient(180deg, #0f1511, #0c0f0d);
+}
+
+.playerBtn.active {
+  border-color: #22ff60;
+  box-shadow: inset 0 0 0 1px rgba(34,255,96,.25), 0 0 24px rgba(34,255,96,.15);
+}
+
+.playerName {
+  font-weight: 700;
+}
+
+.playerPos {
+  font-size: 12px;
+  color: #9dd8a4;
+  border: 1px solid #1f2a21;
+  background: #0c110d;
+  padding: 4px 8px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+  .sideList {
+    order: 2;
+  }
+}
