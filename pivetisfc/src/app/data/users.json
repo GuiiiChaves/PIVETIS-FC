@@ -1,0 +1,5 @@
+[
+  { "id": "1", "name": "Admin", "email": "admin@gmail.com", "password": "123456", "role": "admin" },
+  { "id": "2", "name": "Jogador 1", "email": "jogador1@gmail.com", "password": "123456", "role": "player" },
+  { "id": "3", "name": "Jogador 2", "email": "jogador2@gmail.com", "password": "123456", "role": "player" }
+]

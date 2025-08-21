@@ -1,0 +1,13 @@
+[
+  { "id": 1, "number": 1, "name": "Goleiro", "position": "GK", "overall": 84, "photo": "/players/gk1.jpg" },
+  { "id": 2, "number": 2, "name": "Lateral Direito", "position": "RB", "overall": 80, "photo": "/players/rb2.jpg" },
+  { "id": 3, "number": 3, "name": "Zagueiro Esq.", "position": "LCB", "overall": 82, "photo": "/players/lcb3.jpg" },
+  { "id": 4, "number": 4, "name": "Zagueiro Dir.", "position": "RCB", "overall": 83, "photo": "/players/rcb4.jpg" },
+  { "id": 5, "number": 6, "name": "Lateral Esq.", "position": "LB", "overall": 79, "photo": "/players/lb5.jpg" },
+  { "id": 6, "number": 5, "name": "Meia Esq.", "position": "LM", "overall": 81, "photo": "/players/lm6.jpg" },
+  { "id": 7, "number": 10, "name": "Meia Central", "position": "CM", "overall": 91, "photo": "/players/cm7.jpg" },
+  { "id": 8, "number": 7, "name": "Meia Dir.", "position": "RM", "overall": 82, "photo": "/players/rm8.jpg" },
+  { "id": 9, "number": 21, "name": "Ponta Esq.", "position": "LW", "overall": 86, "photo": "/players/lw9.jpg" },
+  { "id": 10, "number": 9, "name": "Centroavante", "position": "ST", "overall": 88, "photo": "/players/st10.jpg" },
+  { "id": 11, "number": 11, "name": "Ponta Dir.", "position": "RW", "overall": 87, "photo": "/players/rw11.jpg" }
+]
