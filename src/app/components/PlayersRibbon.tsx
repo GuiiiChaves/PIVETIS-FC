@@ -8,7 +8,7 @@ type Player = {
   name: string;
   number?: number;
   position?: string;
-  image?: string;
+  image?: string; // public/players/...
 };
 
 export default function PlayersRibbon({

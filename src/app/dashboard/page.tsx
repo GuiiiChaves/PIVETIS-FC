@@ -18,13 +18,12 @@ type Spot = { id: number; x: number; y: number; label: string };
 
 const formation433: Spot[] = [
   // Defesa
-  { id: 1,  x: 50, y: 94, label: "G" },
+  { id: 1,  x: 50, y: 94, label: "GK" },
   { id: 5,  x: 18, y: 74, label: "LB" },
   { id: 3,  x: 36, y: 70, label: "LCB" },
   { id: 4,  x: 64, y: 70, label: "RCB" },
   { id: 2,  x: 82, y: 74, label: "RB" },
-  // Meio (CM mais adiantado)
-  { id: 9,  x: 30, y: 54, label: "LM" }, // adiantado
+  { id: 9,  x: 30, y: 54, label: "LM" }, 
   { id: 8,  x: 70, y: 54, label: "RM" },
   { id: 7,  x: 50, y: 46, label: "CM" },
   // Ataque

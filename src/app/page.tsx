@@ -1,3 +1,4 @@
+// app/page.tsx
 import type { Metadata } from "next";
 import Link from "next/link";
 import PlayerCarousel from "./components/PlayerCarousel";
@@ -8,8 +9,38 @@ export const metadata: Metadata = {
   description: "Time de Pro Clubs — verde e preto, intensidade total."
 };
 
+type Player = {
+  id: string | number;
+  name: string;
+  position: string;
+  overall?: number;
+  number?: string | number;
+  image?: string;        // URL local ou remota
+  matches?: number;      // PARTIDAS
+  goals?: number;        // GOLS
+  assists?: number;      // ASSISTÊNCIAS
+};
+
+const ME_FORWARD = new Set([
+  // ME pra frente (meias ofensivos e ataque) — cobrindo variações comuns EAFC/FIFA/BR
+  "ME", "MEI", "MD", "MDC", "MC", // inclua/exclua MC/MDC conforme seu critério; deixar aqui é opcional
+  "CAM", "LM", "RM",
+  "SA", "AT", "ATA", "CF",
+  "PD", "PE", "RW", "LW",
+  "CA", "ST"
+]);
+
+function isMeForward(pos?: string) {
+  if (!pos) return false;
+  const norm = pos.trim().toUpperCase();
+  // Se quiser restringir mais, remova MC/MDC aqui
+  const whitelist = ["ME", "MEI", "MD", "CAM", "LM", "RM", "SA", "AT", "ATA", "CF", "PD", "PE", "RW", "LW", "CA", "ST"];
+  return whitelist.includes(norm);
+}
+
 export default function HomePage() {
-  const eleven = players.slice(0, 11);
+  const meForward = (players as Player[]).filter(p => isMeForward(p.position)).slice(0, 11);
+  const eleven = (players as Player[]).slice(0, 11);
 
   return (
     <main style={styles.page}>
@@ -22,16 +53,16 @@ export default function HomePage() {
         </div>
 
         <div style={styles.carouselWrap}>
-          <PlayerCarousel players={eleven as any} />
+          <PlayerCarousel players={meForward as any} />
         </div>
 
-        {/* Bloco de CTAs logo abaixo do carousel */}
+        {/* CTAs abaixo do carousel */}
         <div style={styles.ctaRow}>
-          <Link href="/login" style={styles.ctaPrimary}>Fazer login</Link>
+          <Link href="/login" style={styles.ctaPrimary}>Entrar no time</Link>
           <Link href="/elenco" style={styles.ctaSecondary}>Ver elenco</Link>
         </div>
 
-        {/* 11 cards com nomes dos integrantes */}
+        {/* 11 cards com nomes dos integrantes (exemplo) */}
         <div style={styles.cardsGrid}>
           {eleven.map((p) => (
             <div key={p.id} style={styles.card}>
@@ -40,7 +71,7 @@ export default function HomePage() {
               </div>
               <div style={styles.cardInfo}>
                 <div style={styles.cardName}>{p.name}</div>
-                <div style={styles.cardMeta}>{p.position} • OVR {p.overall}</div>
+                <div style={styles.cardMeta}>{p.position} • OVR {p.overall ?? "-"}</div>
               </div>
             </div>
           ))}
@@ -71,7 +102,9 @@ const styles: Record<string, React.CSSProperties> = {
     textShadow: "0 0 10px rgba(40,234,143,0.35)"
   },
   subtitle: { marginTop: 8, color: "#a5f7d3" },
-  carouselWrap: { marginTop: 16 },
+  carouselWrap: {
+    marginTop: 20
+  },
   ctaRow: {
     display: "flex",
     gap: 12,
