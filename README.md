@@ -9,7 +9,7 @@ Dashboard informativo moderno do time **Pivetis FC** no Pro Clubs do EA FC.
 ## 🎮 Sobre
 
 Dashboard web com design profissional:
-- 🏠 **Home**: Carousel com elenco completo (cards dourados FIFA-style)
+- 🏠 **Home**: Carousel com elenco completo
 - 🔐 **Login**: Sistema de autenticação
 - 📊 **Dashboard**: Formação 4-3-3 tática em campo verde
 - ⚽ **Cards Dourados**: Estatísticas completas estilo FIFA Ultimate Team
