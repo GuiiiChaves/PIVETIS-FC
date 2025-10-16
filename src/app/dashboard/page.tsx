@@ -30,7 +30,7 @@ export default function Dashboard() {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Header Moderno */}
+      {/* Header */}
       <header className="bg-white/95 backdrop-blur-sm border-b border-gray-200 p-6 sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center gap-4">
@@ -124,14 +124,14 @@ export default function Dashboard() {
               ))}
             </div>
 
-            {/* Meio-campistas (CMs) - Linha mais atrás, bem espaçados */}
+            {/* Meio-campistas (CMs)  */}
             <div className="flex justify-center items-center gap-40 w-full max-w-3xl mt-4">
               {TEAM_PLAYERS.filter(p => p.position === "CM").map(player => (
                 <PlayerCard key={player.id} player={player} />
               ))}
             </div>
 
-            {/* Defensores - Linha defensiva organizada */}
+            {/* Defensores  */}
             <div className="flex justify-center items-center gap-12 w-full max-w-4xl mt-8">
               {TEAM_PLAYERS.filter(p => p.position === "LB").map(player => (
                 <PlayerCard key={player.id} player={player} />
@@ -144,7 +144,7 @@ export default function Dashboard() {
               ))}
             </div>
 
-            {/* Goleiro - Mais recuado */}
+            {/* Goleiro */}
             <div className="flex justify-center mt-6">
               {TEAM_PLAYERS.filter(p => p.position === "GK").map(player => (
                 <PlayerCard key={player.id} player={player} />

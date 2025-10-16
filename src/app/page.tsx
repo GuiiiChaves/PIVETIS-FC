@@ -7,7 +7,7 @@ import { TEAM_PLAYERS } from "@/data/players";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
-      {/* Header Moderno */}
+      {/* Header */}
       <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
@@ -53,7 +53,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Stats Cards Moderno */}
+          {/* Stats Cards */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20 max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl p-6 text-center transform hover:scale-105 transition-all shadow-lg border border-gray-200">
               <h3 className="text-5xl font-black text-gray-900 mb-2">12</h3>
@@ -75,14 +75,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Elenco Completo */}
+      {/* Elenco */}
       <section className="py-20 px-6 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto">
           <h3 className="text-4xl md:text-5xl font-black text-gray-900 text-center mb-16">
             ELENCO
           </h3>
           
-          {/* Carousel com setas laterais */}
+          {/* Carousel */}
           <div className="relative">
             {/* Seta Esquerda */}
             <button 
@@ -106,7 +106,7 @@ export default function Home() {
               <span className="text-white text-2xl font-bold">→</span>
             </button>
 
-            {/* Container com scroll */}
+            {/* Container */}
             <div id="players-scroll" className="overflow-x-auto pb-8 scrollbar-hide scroll-smooth">
               <div className="flex gap-6 min-w-max px-4">
                 {TEAM_PLAYERS.map((player) => (
